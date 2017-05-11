@@ -31,12 +31,12 @@ class Customer {
             //add frequent renter points
             frequentRenterPoints += each.getFrequentRenterPoints();
             //show figures for this rental
-            result.append("\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(thisPrice) + "\n");
+            result.append("\t").append(each.getMovie().getTitle()).append("\t").append("\t").append(each.getDaysRented()).append("\t").append(String.valueOf(thisPrice)).append("\n");
             totalPrice += thisPrice;
         }
         //add footer lines
-        result.append("Amount owed is " + String.valueOf(totalPrice) + "\n");
-        result.append("You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points");
+        result.append("Amount owed is ").append(String.valueOf(totalPrice)).append("\n");
+        result.append("You earned ").append(String.valueOf(frequentRenterPoints)).append(" frequent renter points");
         return result;
     }
 
