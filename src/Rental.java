@@ -16,7 +16,7 @@ class Rental {
 
     double getRentalPrice() {
         double price = 0;
-        switch (getMovie().getPriceCode()) {
+        switch (movie.getPriceCode()) {
             case Movie.REGULAR:
                 price += 2;
                 if (getDaysRented() > 2)
