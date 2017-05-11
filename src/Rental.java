@@ -15,22 +15,22 @@ class Rental {
     }
 
     double getRentalPrice() {
-        double thisAmount = 0;
+        double price = 0;
         switch (getMovie().getPriceCode()) {
             case Movie.REGULAR:
-                thisAmount += 2;
+                price += 2;
                 if (getDaysRented() > 2)
-                    thisAmount += (getDaysRented() - 2) * 1.5;
+                    price += (getDaysRented() - 2) * 1.5;
                 break;
             case Movie.NEW_RELEASE:
-                thisAmount += getDaysRented() * 3;
+                price += getDaysRented() * 3;
                 break;
             case Movie.CHILDRENS:
-                thisAmount += 1.5;
+                price += 1.5;
                 if (getDaysRented() > 3)
-                    thisAmount += (getDaysRented() - 3) * 1.5;
+                    price += (getDaysRented() - 3) * 1.5;
                 break;
         }
-        return thisAmount;
+        return price;
     }
 }
