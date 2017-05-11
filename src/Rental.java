@@ -1,10 +1,12 @@
 class Rental {
     private Movie movie;
     private int daysRented;
+
     public Rental(Movie newmovie, int newdaysRented) {
         movie = newmovie;
         daysRented = newdaysRented;
     }
+
     public int getDaysRented() {
         return daysRented;
     }
@@ -12,7 +14,7 @@ class Rental {
         return movie;
     }
 
-    double amountFor() {
+    double getRentalPrice() {
         double thisAmount = 0;
         switch (getMovie().getPriceCode()) {
             case Movie.REGULAR:
