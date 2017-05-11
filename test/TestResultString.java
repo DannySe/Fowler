@@ -30,7 +30,7 @@ public class TestResultString {
             c.addRental(rentals[i]);
         }
 
-        String result = c.statement();
+        String result = c.statement().toString();
         System.out.println(result);
 
         // Get separate result lines
