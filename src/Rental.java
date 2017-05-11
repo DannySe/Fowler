@@ -10,6 +10,7 @@ class Rental {
     public int getDaysRented() {
         return daysRented;
     }
+
     public Movie getMovie() {
         return movie;
     }
@@ -32,5 +33,13 @@ class Rental {
                 break;
         }
         return price;
+    }
+
+    int getFrequentRenterPoints() {
+        int points = 1;
+        if ((movie.getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1) {
+            points++;
+        }
+        return points;
     }
 }
